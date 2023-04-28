@@ -1,14 +1,32 @@
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
-public class menu {
-    private ArrayList<Smoothie> smoothies;
-
+public class Menu {
+    private  ArrayList<Smoothie> smoothiesList = new ArrayList<smoothie>();
     public Menu() {
-        smoothies = new ArrayList<Smoothie>();
+        smoothiesList = new ArrayList<Smoothie>();
+        smoothiesList.add(new smoothie(____)); 
     }
-
     public void addDrink(Smoothie smoothie) {
-        smoothies.add(smoothie);
+        smoothiesList.add(smoothie);
+    }
+    public void showOrder() {
+    smoothiesList.size();
+    smoothiesList.get(0).toString();
+	smoothiesList.get(1).toString();
+    /*System.out.println("Order:");
+    for (int i = 0; i < smoothiesList.size(); i++) {
+        System.out.println((i+1) + ". " + smoothiesList.get(i).toString());  
+    } */ 
+    }
+    public void showTotalPrice() {
+        double totalPrice = 0;
+        for (Smoothie smoothie : smoothiesList) { //loop
+            totalPrice += smoothie.getPrice();
+        }
+        System.out.println("Total price: " + totalPrice);
+    }
+    public void clearList() {
+        smoothiesList.clear();
     }
 }
