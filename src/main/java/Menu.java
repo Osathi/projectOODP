@@ -2,14 +2,17 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
 public class Menu {
-    private  ArrayList<Smoothie> smoothiesList = new ArrayList<smoothie>();
+    
+    private  ArrayList<Smoothie> smoothiesList = new ArrayList<Smoothie>();
+
     public Menu() {
         smoothiesList = new ArrayList<Smoothie>();
-        smoothiesList.add(new smoothie(____)); 
     }
+
     public void addDrink(Smoothie smoothie) {
         smoothiesList.add(smoothie);
     }
+
     public void showOrder() {
     smoothiesList.size();
     smoothiesList.get(0).toString();
@@ -19,6 +22,7 @@ public class Menu {
         System.out.println((i+1) + ". " + smoothiesList.get(i).toString());  
     } */ 
     }
+
     public void showTotalPrice() {
         double totalPrice = 0;
         for (Smoothie smoothie : smoothiesList) { //loop
