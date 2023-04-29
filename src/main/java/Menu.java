@@ -1,4 +1,3 @@
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
 public class Menu {
@@ -9,14 +8,13 @@ public class Menu {
         smoothiesList = new ArrayList<Smoothie>();
     }
 
-    public void addDrink(Smoothie smoothie) {
-        smoothiesList.add(smoothie);
+    public void addDrink(Smoothie Smoothie) {
+        smoothiesList.add(Smoothie);
     }
 
     public void showOrder() {
     smoothiesList.size();
-    smoothiesList.get(0).toString();
-	smoothiesList.get(1).toString();
+    System.out.println(smoothiesList.get(0).toString());
     /*System.out.println("Order:");
     for (int i = 0; i < smoothiesList.size(); i++) {
         System.out.println((i+1) + ". " + smoothiesList.get(i).toString());  

@@ -1,10 +1,11 @@
 public class MainApp {
     public static void main(String[] args) {
-        System.out.println("Hello OODPPPPP");
-        System.out.println("Hello OODPPPPP");
-        System.out.println("Hello OODPPPPP");
+        
+        Menu menu = new Menu();
 
-        TestClass T = new TestClass();
-        T.printnumber();
+        menu.addDrink(new Smoothie(fruitType.Strawberry, 2, cupSize.XL, topping.None));
+        menu.showOrder();
+
+        
     }
 }
