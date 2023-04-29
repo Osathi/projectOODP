@@ -54,10 +54,6 @@ public int calculatePrice() {
          cal_price += 6;
          break;
 
-         case Mixedberry:
-         cal_price += 7;
-         break;
-
          default:
          System.out.println("no fruit");
          break;
@@ -75,14 +71,6 @@ public int calculatePrice() {
 
          case L:
          cal_price += 20;
-         break;
-
-         case XL:
-         cal_price += 30;
-         break;
-
-         case XXL:
-         cal_price += 40;
          break;
 
          default:
@@ -113,15 +101,15 @@ public int calculatePrice() {
    }
         
    return cal_price;
-   
+
    }
 
 public int getPrice() {
-      calculatePrice();
+      price=calculatePrice();
       return this.price;
    }
 public String toString() {
-      calculatePrice();
+      price=calculatePrice();
 
     String string =
 
@@ -139,11 +127,10 @@ enum fruitType {
    Strawberry, 
    Banana, 
    Orange, 
-   Mixedberry;
 }
 
 enum cupSize {
-   S, M, L, XL, XXL;
+   S, M, L;
 }
 
 enum topping {
