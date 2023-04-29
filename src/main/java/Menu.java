@@ -13,20 +13,31 @@ public class Menu {
     }
 
     public void showOrder() {
-    smoothiesList.size();
-    System.out.println(smoothiesList.get(0).toString());
-    /*System.out.println("Order:");
-    for (int i = 0; i < smoothiesList.size(); i++) {
-        System.out.println((i+1) + ". " + smoothiesList.get(i).toString());  
-    } */ 
+    
+    System.out.println("");
+    
+        
+    if(smoothiesList.size()>0){
+        System.out.println("+++Show Order+++");
+        for(int i = 0 ; i < smoothiesList.size() ; i++)
+        {   
+        System.out.println((i+1) + ". " + smoothiesList.get(i).toString());
+        }
+        showTotalPrice();
+    }else{
+        System.out.println("+++No Drink in order+++");
+    }
+    
+    System.out.println("+++++++++++++++");
+
     }
 
     public void showTotalPrice() {
-        double totalPrice = 0;
+        int totalPrice = 0;
         for (Smoothie smoothie : smoothiesList) { //loop
             totalPrice += smoothie.getPrice();
         }
-        System.out.println("Total price: " + totalPrice);
+        System.out.println("Total price: " + totalPrice +"$");
     }
     public void clearList() {
         smoothiesList.clear();

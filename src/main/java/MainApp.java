@@ -6,9 +6,11 @@ public class MainApp {
         Menu menu = new Menu();
         boolean MachineOn = true;
 
+        whileloop:
         while(MachineOn) {
 
             int Select;
+            System.out.println("");
             System.out.println("===Smoothie Vending machine===");
             System.out.println("1.Order");
             System.out.println("2.show order");
@@ -26,17 +28,24 @@ public class MainApp {
 
             }else if(Select==1) {
                 //create new smoothie and add to menu
-                Smoothie drink = CreateNewDrink();             
+                Smoothie drink = CreateNewDrink();
+                System.out.println("");
+                System.out.println("Add new drink to order");
+                System.out.println(drink.toString());                   
                 menu.addDrink(drink);
     
             }else if(Select==2) {
-                menu.showOrder();;
+                menu.showOrder();
+
     
             }else if(Select==3) {
-                menu.showTotalPrice();
+                menu.showOrder();
+                System.out.println("Please pay and wait for your order Thank you!!");
+                menu.clearList();
     
             }else{
-                System.exit(0);
+                System.out.print("Wrong Input Please Choose 1-4: ");
+                continue whileloop;
             }
             
             
@@ -54,10 +63,12 @@ public class MainApp {
         boolean CreateDrink=true;
         int stage=1;
 
+        whileloop:
         while(CreateDrink)
         {
             if(stage==1)
             {
+                System.out.println("");
                 System.out.println("===Select Fruit===");
                 System.out.println("1.Strawberry");
                 System.out.println("2.Banana");
@@ -77,12 +88,14 @@ public class MainApp {
                     newDrink.setFruit(fruitType.Banana);
                     stage++;
                 }else{
-                    System.exit(0);
+                    System.out.print("Wrong Input Please Choose 1-3: ");
+                continue whileloop;
                 }
 
             }
             if(stage==2)
             {
+                System.out.println("");
                 System.out.println("===Select sweet level===");
  
                 int Select;
@@ -94,11 +107,13 @@ public class MainApp {
                     newDrink.setSweetLevel(Select);
                     stage++;
                 }else{
-                    System.exit(0);
+                    System.out.print("Wrong Input Please Choose 1-4: ");
+                continue whileloop;
                 }
             }
             if(stage==3)
             {
+                System.out.println("");
                 System.out.println("===Select Cup size===");
                 System.out.println("1.S");
                 System.out.println("2.M");
@@ -118,11 +133,13 @@ public class MainApp {
                     newDrink.setSize(cupSize.M);
                     stage++;
                 }else{
-                    System.exit(0);
+                    System.out.print("Wrong Input Please Choose 1-3: ");
+                continue whileloop;
                 }
             }
             if(stage==4)
             {
+                System.out.println("");
                 System.out.println("===Select topping===");
                 System.out.println("1.None");
                 System.out.println("2.Nut");
@@ -130,7 +147,7 @@ public class MainApp {
                 System.out.println("4.ChocolateChip");
                 int Select;
                 Scanner keyboard = new Scanner(System.in);				
-                System.out.print("Choose 1-3: ");
+                System.out.print("Choose 1-4: ");
                 Select = keyboard.nextInt();
 
                 if(Select==1) {
@@ -146,7 +163,8 @@ public class MainApp {
                     newDrink.setTop(topping.ChocolateChip);
                     stage++;
                 }else{
-                    System.exit(0);
+                    System.out.print("Wrong Input Please Choose 1-4: ");
+                continue whileloop;
                 }
 
             }
