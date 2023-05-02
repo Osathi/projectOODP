@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainApp {
@@ -20,7 +21,14 @@ public class MainApp {
             
             Scanner keyboard = new Scanner(System.in);				
             System.out.print("Choose 1-4: ");
-            Select = keyboard.nextInt();
+            
+            try {
+                Select = keyboard.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a number.");
+                keyboard.nextLine();
+                continue whileloop;
+            }
             
             if(Select==4) {
                 System.out.print("Machine is turning off.. Goodbye!!");
@@ -76,7 +84,14 @@ public class MainApp {
                 int Select;
                 Scanner keyboard = new Scanner(System.in);				
                 System.out.print("Choose 1-3: ");
-                Select = keyboard.nextInt();
+                
+                try {
+                    Select = keyboard.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                    keyboard.nextLine();
+                    continue whileloop;
+                }
 
                 if(Select==3) {
                     newDrink.setFruit(fruitType.Orange);
@@ -101,7 +116,14 @@ public class MainApp {
                 int Select;
                 Scanner keyboard = new Scanner(System.in);				
                 System.out.print("Choose 1-4: ");
-                Select = keyboard.nextInt();
+                
+                try {
+                    Select = keyboard.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                    keyboard.nextLine();
+                    continue whileloop;
+                }
 
                 if(Select >=1 && Select <= 4) {
                     newDrink.setSweetLevel(Select);
@@ -121,8 +143,15 @@ public class MainApp {
                 int Select;
                 Scanner keyboard = new Scanner(System.in);				
                 System.out.print("Choose 1-3: ");
-                Select = keyboard.nextInt();
-
+                
+                try {
+                    Select = keyboard.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                    keyboard.nextLine();
+                    continue whileloop;
+                }
+                
                 if(Select==3) {
                     newDrink.setSize(cupSize.L);
                     stage++;
@@ -148,7 +177,14 @@ public class MainApp {
                 int Select;
                 Scanner keyboard = new Scanner(System.in);				
                 System.out.print("Choose 1-4: ");
-                Select = keyboard.nextInt();
+                
+                try {
+                    Select = keyboard.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                    keyboard.nextLine();
+                    continue whileloop;
+                }
 
                 if(Select==1) {
                     newDrink.setTop(topping.None);
