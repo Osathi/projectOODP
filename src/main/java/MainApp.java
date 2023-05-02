@@ -103,7 +103,7 @@ public class MainApp {
                     newDrink.setFruit(fruitType.Banana);
                     stage++;
                 }else{
-                    System.out.print("Wrong Input Please Choose 1-3: ");
+                    System.out.println("Wrong Input Please Choose 1-3: ");
                 continue whileloop;
                 }
 
@@ -129,7 +129,7 @@ public class MainApp {
                     newDrink.setSweetLevel(Select);
                     stage++;
                 }else{
-                    System.out.print("Wrong Input Please Choose 1-4: ");
+                    System.out.println("Wrong Input Please Choose 1-4: ");
                 continue whileloop;
                 }
             }
@@ -162,7 +162,7 @@ public class MainApp {
                     newDrink.setSize(cupSize.M);
                     stage++;
                 }else{
-                    System.out.print("Wrong Input Please Choose 1-3: ");
+                    System.out.println("Wrong Input Please Choose 1-3: ");
                 continue whileloop;
                 }
             }
@@ -199,7 +199,7 @@ public class MainApp {
                     newDrink.setTop(topping.ChocolateChip);
                     stage++;
                 }else{
-                    System.out.print("Wrong Input Please Choose 1-4: ");
+                    System.out.println("Wrong Input Please Choose 1-4: ");
                 continue whileloop;
                 }
 
