@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 
 public class Menu {
@@ -39,7 +40,8 @@ public class Menu {
         }
         System.out.println("Total price: " + totalPrice +"$");
     }
-    public void clearList() {
+    public void clearList(File inputFile) {
+        MenuReadWrite.saveOrder(smoothiesList, inputFile);
         smoothiesList.clear();
     }
 }

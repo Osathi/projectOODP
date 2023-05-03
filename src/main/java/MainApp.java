@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -6,6 +8,15 @@ public class MainApp {
         
         Menu menu = new Menu();
         boolean MachineOn = true;
+        File HistoryFile = new File("History.txt");
+        
+        try {
+            HistoryFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+  
+        
 
         whileloop:
         while(MachineOn) {
@@ -17,10 +28,11 @@ public class MainApp {
             System.out.println("2.show order");
             System.out.println("3.confirm order and pay");
             System.out.println("4.Exit");
+            System.out.println("5.view order history");
             System.out.println("==============");
             
             Scanner keyboard = new Scanner(System.in);				
-            System.out.print("Choose 1-4: ");
+            System.out.print("Choose 1-5: ");
             
             try {
                 Select = keyboard.nextInt();
@@ -49,8 +61,12 @@ public class MainApp {
             }else if(Select==3) {
                 menu.showOrder();
                 System.out.println("Please pay and wait for your order Thank you!!");
-                menu.clearList();
+                menu.clearList(HistoryFile);
     
+            
+            }else if(Select==5) {
+                MenuReadWrite.loadOrder(HistoryFile);
+
             }else{
                 System.out.print("Wrong Input Please Choose 1-4: ");
                 continue whileloop;
