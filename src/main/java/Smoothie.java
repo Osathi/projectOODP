@@ -8,6 +8,23 @@ public class Smoothie {
    private topping top;
    private int price;
 
+   enum fruitType {
+      Strawberry, 
+      Banana, 
+      Orange, 
+   }
+   
+   enum cupSize {
+      S, M, L;
+   }
+   
+   enum topping {
+      None,
+      Nut, 
+      DryFruit, 
+      ChocolateChip;
+   }
+
    Smoothie(fruitType fruit, int sweetLevel, cupSize size, topping top) {
         this.fruit = fruit;
         this.sweetLevel = sweetLevel; //(level 1-4)
@@ -123,19 +140,3 @@ public String toString() {
    }
 }
 
-enum fruitType {
-   Strawberry, 
-   Banana, 
-   Orange, 
-}
-
-enum cupSize {
-   S, M, L;
-}
-
-enum topping {
-   None,
-   Nut, 
-   DryFruit, 
-   ChocolateChip;
-}

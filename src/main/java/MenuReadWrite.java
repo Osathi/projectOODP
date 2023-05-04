@@ -12,11 +12,7 @@ import java.time.LocalDateTime;
 
 public class MenuReadWrite {
 
-
-
-
     static String fileName = "OrderHistory.txt";
-    
     
     public static void saveOrder(ArrayList<Smoothie> smoothiesList, File inputFile)
     {
