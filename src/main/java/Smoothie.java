@@ -1,4 +1,20 @@
 
+enum fruitType {
+   Strawberry, 
+   Banana, 
+   Orange, 
+}
+
+enum cupSize {
+   S, M, L;
+}
+
+enum topping {
+   None,
+   Nut, 
+   DryFruit, 
+   ChocolateChip;
+}
 
 public class Smoothie {
 
@@ -8,22 +24,7 @@ public class Smoothie {
    private topping top;
    private int price;
 
-   enum fruitType {
-      Strawberry, 
-      Banana, 
-      Orange, 
-   }
    
-   enum cupSize {
-      S, M, L;
-   }
-   
-   enum topping {
-      None,
-      Nut, 
-      DryFruit, 
-      ChocolateChip;
-   }
 
    Smoothie(fruitType fruit, int sweetLevel, cupSize size, topping top) {
         this.fruit = fruit;
