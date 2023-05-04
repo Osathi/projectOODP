@@ -1,20 +1,14 @@
 projectOODP
 
-Topic :	 Smoothie Vending machine	
-
+Topic :	 Smoothie Vending machine
+	
 Group Member :	                   
 
+Osathi Jantrasri 6531503093
 
-6531503093
-Osathi Jantrasri
-
-
-6531503080
-Sorrawit Thanakhwang
-
+Sorrawit Thanakhwang 6531503080
 
 Background and rational :	
-
 The system provides functionality for customers to place their order from Smoothie Vending machine 	
 
 
